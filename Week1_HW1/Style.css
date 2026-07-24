@@ -1,0 +1,96 @@
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 300;
+  background-color: #f7f5f0;
+  color: #3d3d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+  letter-spacing: 0.02em;
+}
+
+.profile-card {
+  width: min(100%, 420px);
+  padding: 48px 40px;
+  background-color: #faf9f6;
+  border: 1px solid #e8e4dc;
+}
+
+.label {
+  margin: 0;
+  color: var#b8b2a6;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+
+h1 {
+  margin: 12px 0 0;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #3d3d3d;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b6560;
+  letter-spacing: 0.12em;
+}
+
+.divider {
+  margin: 32px 0;
+  border: none;
+  border-top: 1px solid #d9d4cb;
+}
+
+#summary {
+  margin: 0;
+  color: #6b6560;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  transition: opacity 0.3s ease;
+}
+
+#summary.is-fading {
+  opacity: 0;
+}
+
+button {
+  margin-top: 36px;
+  width: 100%;
+  border: 1px solid #3d3d3d;
+  border-radius: 0;
+  padding: 14px 20px;
+  background: transparent;
+  color: #3d3d3d;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+button:hover {
+  background: #3d3d3d;
+  color: #faf9f6;
+}
+
+button:focus-visible {
+  outline: 1px solid #3d3d3d;
+  outline-offset: 4px;
+}

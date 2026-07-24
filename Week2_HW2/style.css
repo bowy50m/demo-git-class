@@ -1,0 +1,173 @@
+* {
+    box- sizing: border - box;
+}
+
+body {
+    margin: 0;
+    font - family: Sprague, Coomper Black, Frankfurter;
+    background: #f0f4f9;
+    color: #202124;
+
+}
+
+.site-header {
+    background: #194379;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.img{
+    align-items: left;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 0
+}
+
+.navbar p{
+    color: #f9f9f9;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+   
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #c8e1e6;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #1a829f;
+}
+
+.hero-section {
+    max-width: 3000px;
+    margin: 0 50;
+    padding: 0;
+    text-align: left;
+    font-size: 3rem;
+    font-style: italic;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    margin-top: 2.5Rem;
+
+}
+.hero-content{
+    flex: 1.5;
+}
+.hero-content p {
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.hero-card {
+    font-size:1.5rem;
+    flex: 2;
+    padding: 1rem;
+    list-style: circle;
+}
+.feature-section {
+    justify-content: space-between;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+.feature-section h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+.feature-section p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+    height: 200%;
+    margin: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 0;
+    
+}
+
+.main-content {
+    display: flex;
+}
+
+.site-footer{
+    border-top: #ccc;
+    font-size: 22px;
+    text-align: center;
+    background-color: #194379;
+    margin: 0 2rem;
+    padding: 1rem 0;
+    color: #edeff2;
+    font-style: italic;
+}
+
+.pricing-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: center;
+    margin-bottom: 50px;
+    margin: 4rem 2rem 4rem 2rem;
+    gap: 1.5rem;
+    
+}
+
+.pricing-section h1{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.pricing-section p{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.pricing-card{
+    background-color: rgb(235, 236, 243);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: #194379;
+    font-size: small;
+    font-style: italic;
+    border-style: dotted;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 600px;
+    flex: 1;
+}

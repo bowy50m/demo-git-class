@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap");
+
+:root {
+    --primary: #e21d2f;
+    --primary-dark: #b51222;
+    --navy: #17233d;
+
+    --background: #f6f7f9;
+    --surface: #ffffff;
+    --surface-soft: #fafafa;
+
+    --text: #172033;
+    --text-secondary: #667085;
+    --border: #e8eaf0;
+
+    --shadow:
+        0 1px 2px rgba(16, 24, 40, 0.04),
+        0 12px 32px rgba(16, 24, 40, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Noto Sans Thai", "Inter", sans-serif;;
+    background:
+        //radial-gradient(
+            circle at top right,
+            rgba(37, 2, 5, 0.08),
+            transparent 30%
+        ),
+        var(--background);
+    color: var(--text);
+}
+
+.page {
+    min-height: 100vh;
+    padding: 48px 32px 72px;
+}
+
+.dashboard {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* หัวข้อด้านบน */
+
+.label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 16px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.label::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--primary);
+}
+
+h1 {
+    max-width: 1500px;
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(38px, 4.5vw, 58px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+}
+
+.description {
+    max-width: 720px;
+    margin: 20px 0 36px;
+    color: var(--text-secondary);
+    font-size: 18px;
+    line-height: 1.75;
+}
+/* รายการสินค้า */
+
+
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* การ์ดสินค้า */
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    padding: 28px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* วงกลมตกแต่งด้านหลัง */
+
+.product-card::before {
+    content: "";
+    position: absolute;
+    top: -55px;
+    right: -55px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(226, 29, 47, 0.07);
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+       
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(226, 29, 47, 0.22);
+    box-shadow:
+        0 2px 4px rgba(16, 24, 40, 0.04),
+        0 24px 50px rgba(16, 24, 40, 0.12);
+        
+}
+
+.product-card:hover::before {
+    transform: scale(1.15);
+    background: rgba(226, 29, 47, 0.11);
+}
+
+.product-card h2 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 18px;
+    padding-right: 32px;
+    color: var(--navy);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+}
+
+.product-card p {
+    position: relative;
+    z-index: 1;
+    margin: 8px 0;
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+
+.product-card strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* ปุ่ม */
+
+.badge {
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 10px 17px;
+    border: 1px solid rgba(226, 29, 47, 0.15);
+    border-radius: 999px;
+    background: rgba(226, 29, 47, 0.08);
+    color: var(--primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.product-card:hover .badge {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .page {
+        padding: 56px 24px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .page {
+        padding: 40px 18px;
+    }
+
+    .description {
+        margin-bottom: 32px;
+        font-size: 16px;
+    }
+
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        min-height: 230px;
+        padding: 25px;
+        border-radius: 20px;
+    }
+}

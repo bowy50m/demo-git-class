@@ -1,0 +1,84 @@
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ใบแจ้งซ่อม</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <main class="page">
+        <section class="form-card">
+            <div class="card-accent"></div>
+
+            <header class="card-header">
+                <p class="label">บริษัท กขค จำกัด</p>
+                <h1>ใบแจ้งซ่อม</h1>
+                <p class="description">กรอกรายละเอียดการแจ้งซ่อม</p>
+            </header>
+
+            <form id="ใบแจ้งซ่อม">
+                <div class="form-group">
+                    <label for="fullName">ชื่อของคุณ</label>
+                    <input id="fullName" type="text" placeholder="เช่น บาส" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Department">แผนก</label>
+                    <select id="Department">
+                        <option value="">ระบุแผนกของคุณ</option>
+                        <option value="แผนกซ่อมบำรุง">แผนกซ่อมบำรุง</option>
+                        <option value="แผนกจัดซื้อ">แผนกจัดซื้อ</option>
+                        <option value="แผนกQ.C.">แผนกQ.C.</option>
+                        <option value="แผนกออฟฟิศ">แผนกออฟฟิศ</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="Machine">เครื่องจักร</label>
+                        <select id="Machine">
+                            <option value="">ระบุเครื่องจักร</option>
+                            <option value="A1">A1</option>
+                            <option value="A2">A2</option>
+                            <option value="A3">A3</option>
+                            <option value="A4">A4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Cause">อาการที่พบ</label>
+                        <select id="Cause">
+                            <option value="">ระบุอาการที่พบ</option>
+                            <option value="เปิดไม่ติด">เปิดไม่ติด</option>
+                            <option value="ไฟไม่ร้อน">ไฟไม่ร้อน</option>
+                            <option value="เครื่องหยุดอัตโนมัติ">เครื่องหยุดอัตโนมัติ</option>
+                            <option value="อื่นๆระบุ..">อื่นๆระบุ..</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">หากเกิดจากสาเหตุอื่นๆ โปรดระบุ</label>
+                    <textarea id="message" placeholder="กรุณาระบุอาการเสียเพิ่มเติม"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">ส่งข้อมูล</button>
+                </div>
+
+                <div id="result" class="result-box">
+                    กรุณากรอกข้อมูลให้ครบถ้วน แล้วกดส่งข้อมูล
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
