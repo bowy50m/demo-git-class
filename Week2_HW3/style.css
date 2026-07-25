@@ -1,3 +1,6 @@
+/* ========================================
+   1. Base Styles
+======================================== */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +11,10 @@ body{
     font-family: Arial, sans-serif;
     background-color: #0f172a;
 }
+
+/* ========================================
+   2. Header Styles
+======================================== */
 
 .site-header{
     margin: 0;
@@ -49,6 +56,9 @@ body{
     color: #38bdf8;
 }
 
+/* ========================================
+   3. Hero Section Styles
+======================================== */
 .hero-section{
     display: flex;
     justify-content: center;
@@ -129,6 +139,9 @@ body{
     margin: 10px 0 0 0;
 }
 
+/* ========================================
+   4. Features Section Styles
+======================================== */
 .features-section{
     display: flex;
     justify-content: center;
@@ -163,6 +176,9 @@ body{
     
 }
 
+/* ========================================
+   5. Pricing Section Styles
+======================================== */
 .pricing-section{
    color: #e2e8f0;
    max-resolution: 1200px;
@@ -218,6 +234,9 @@ body{
     font-size: 20px;
 }
 
+/* ========================================
+   6. Curriculum Section Styles
+======================================== */
 .curriculum-section{
    color: #e2e8f0;
     max-resolution: 1200px;
@@ -272,6 +291,9 @@ body{
     margin: 10px 0 0 0;
 }
 
+/* ========================================
+   7. Testimonials Section Styles
+======================================== */
 .testimonials-section{
     color: #e2e8f0;
     max-resolution: 1200px;
@@ -335,6 +357,9 @@ body{
     line-height: 1.5;
 }
 
+/* ========================================
+   8. Footer Section Styles
+======================================== */
 .site-footer{
     color: #e2e8f0;
     max-resolution: 1200px;
